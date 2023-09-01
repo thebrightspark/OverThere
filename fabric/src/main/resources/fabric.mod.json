@@ -1,36 +1,31 @@
 {
-    "schemaVersion": 1,
-    "id": "mod_id",
-    "version": "${version}",
-    "name": "${mod_name}",
-    "description": "This is an example description! Tell everyone what your mod is about!",
-    "authors": [
-        "${mod_author}"
-    ],
-    "contact": {
-        "homepage": "https://fabricmc.net/",
-        "sources": "https://github.com/FabricMC/fabric-example-mod"
-    },
-    "license": "CC0-1.0",
-    "icon": "assets/modid/icon.png",
-    "environment": "*",
-    "entrypoints": {
-        "main": [
-            "com.example.examplemod.ExampleMod"
-        ]
-    },
-    "mixins": [
-        "examplemod.mixins.json",
-        "examplemod.fabric.mixins.json"
-    ],
-    "depends": {
-        "fabricloader": ">=0.14",
-        "fabric": "*",
-        "minecraft": "1.20",
-        "java": ">=17"
-    },
-    "suggests": {
-        "another-mod": "*"
-    }
+	"schemaVersion": 1,
+	"id": "overthere",
+	"version": "${version}",
+	"name": "${mod_name}",
+	"description": "A ping mod for Minecraft",
+	"authors": ["${mod_author}"],
+	"contact": {
+		"homepage": "https://github.com/thebrightspark/OverThere",
+		"sources": "https://github.com/thebrightspark/OverThere"
+	},
+	"license": "MIT License",
+	"icon": "assets/modid/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["brightspark.overthere.OverThereFabric"],
+		"client": ["brightspark.overthere.OverThereFabricClient"]
+	},
+	"mixins": [
+		"overthere.mixins.json",
+		"overthere.fabric.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14",
+		"fabric": "*",
+		"fabric-key-binding-api-v1": "*",
+		"minecraft": ">=1.20",
+		"java": ">=17"
+	},
+	"suggests": {}
 }
-  
