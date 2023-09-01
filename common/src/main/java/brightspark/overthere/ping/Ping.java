@@ -48,7 +48,7 @@ public sealed abstract class Ping permits EntityPing, LocationPing {
 
 		return switch (hitResult.getType()) {
 			case ENTITY -> new EntityPing(player, ((EntityHitResult) hitResult).getEntity());
-			case BLOCK -> new LocationPing(player, player.level(), player.position());
+			case BLOCK -> new LocationPing(player, player.level(), hitResult.getLocation());
 			case MISS -> null;
 		};
 	}
